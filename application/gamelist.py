@@ -14,21 +14,17 @@ class gamelist():
         return result
 
     def export_to_csv(self, outfile: str):
-        output = "              \
-                Title;          \
-                Beaten on date; \
-                Platform;       \
-                Comment;        \
-                \n              \
+        output = "               \
+                Title;           \
+                Started on date; \
+                Beaten on date;  \
+                In game time;    \
+                Platform;        \
+                Comment;         \
+                \n               \
         "
         for g in self.gamelist:
-            output += (
-                str(g.title) + "; " +
-                str(g.beaten_timestamp) + "; " +
-                str(g.platform) + "; " +
-                str(g.comment) + "; " +
-                "\n"
-            )
+            output += str(g)
 
         with open(outfile, "w+", encoding="utf8") as f:
             f.write(output)
