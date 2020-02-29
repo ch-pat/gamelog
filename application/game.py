@@ -3,8 +3,9 @@ from datetime import timedelta
 
 
 class game():
-    def __init__(self, title: str, started_ts: datetime=datetime.now(),
-                 beaten_ts: datetime=None, plat: str="", comment: str=""):
+    def __init__(self, title: str, started_ts: datetime = datetime.now(),
+                 beaten_ts: datetime = None, plat: str = "",
+                 comment: str = ""):
         self.title = title
         self.started_timestamp = started_ts
         self.beaten_timestamp = beaten_ts if beaten_ts is not None else ""
@@ -17,6 +18,10 @@ class game():
 
     def set_platform(self, platform: str):
         self.platform = platform
+
+    def get_fields(self):
+        return [self.title, self.started_timestamp, self.beaten_timestamp,
+                self.in_game_play_time, self.platform, self.comment]
 
     def __str__(self):
         return (

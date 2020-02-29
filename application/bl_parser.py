@@ -21,8 +21,8 @@ class bl_parser():
             with open(output_file, "w+", encoding="utf8") as f:
                 f.write(trimmed)
 
-    def parse_to_gamelist(self, backlog_text: str):
-        """Extracts a list of game titles
+    def parse_txt_to_gamelist(self, backlog_text: str):
+        """Extracts a list of game titles copypasted from backloggery.com
         returns a tuple containing the list of games
         and the respective list of platforms as strings
         """
@@ -42,6 +42,6 @@ class bl_parser():
 
 if __name__ == "__main__":
     parser = bl_parser()
-    g, p = parser.parse_to_gamelist("backlog_paste.txt")
+    g, p = parser.parse_txt_to_gamelist("backlog_paste.txt")
     print((g, p))
     print(len(g), len(p))
