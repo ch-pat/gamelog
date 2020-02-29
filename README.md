@@ -11,3 +11,11 @@ Features will include:
    * Games added by month
 * Importing from backloggery.com (by literally manually copying-all your list from the website to a text file)
 * More as they come to mind
+
+Currently running main imports your list from a "backlog_paste.txt" file and allows for adding by manually running python functions in a python shell like this:
+```
+python3 -i application/main.py
+>>> gl = gamelist()
+Reading existing backlog.csv file
+>>> 
+```
