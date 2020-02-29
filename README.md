@@ -17,5 +17,5 @@ Currently running main imports your list from a "backlog_paste.txt" file and all
 python3 -i application/main.py
 >>> gl = gamelist()
 Reading existing backlog.csv file
->>> 
+>>> gl += game("The Legend of Zelda", platform="NES", comment="Classic!")
 ```
