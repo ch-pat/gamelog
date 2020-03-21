@@ -2,6 +2,7 @@ from application.gamelist import gamelist
 from application.game import game
 import click
 
+
 @click.group(invoke_without_command=True)
 @click.pass_context
 def log(ctx):
@@ -25,8 +26,6 @@ def add(title):
     else:
         with click.Context(add) as ctx:
             click.echo(add.get_help(ctx))
-
-
 
 
 if __name__ == "__main__":

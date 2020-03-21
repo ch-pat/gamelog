@@ -38,8 +38,11 @@ class gamelist():
                 for row in reader:
                     if row != self.fields:
                         result += [
-                            game(row[0], datetime.strptime(row[1], "%Y-%m-%d %H:%M:%S.%f"),
-                                 row[2], row[4], row[5])
+                            game(
+                                row[0],
+                                datetime.strptime(row[1],
+                                                  "%Y-%m-%d %H:%M:%S.%f"),
+                                row[2], row[4], row[5])
                             ]
             return result
 

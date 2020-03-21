@@ -12,10 +12,7 @@ Features will include:
 * Importing from backloggery.com (by literally manually copying-all your list from the website to a text file)
 * More as they come to mind
 
-Currently running main imports your list from a "backlog_paste.txt" file and allows for adding by manually running python functions in a python shell like this:
-```python
-python3 -i application/main.py
->>> gl = gamelist()
-Reading existing backlog.csv file
->>> gl += game("The Legend of Zelda", platform="NES", comment="Classic!")
-```
+You can clone the repository and run `pip install --editable .` from within the directory to create the command `gamelog` for your command line.
+
+Usage:
+`gamelog add "The Legend of Zelda"` adds the game to your list
