@@ -1,8 +1,8 @@
 from datetime import datetime
-from game import game
+from application.game import game
+from application import bl_parser
 import csv
 import os
-import bl_parser
 
 
 class gamelist():
@@ -38,7 +38,8 @@ class gamelist():
                 for row in reader:
                     if row != self.fields:
                         result += [
-                            game(row[0], row[1], row[2], row[4], row[5])
+                            game(row[0], datetime.strptime(row[1], "%Y-%m-%d %H:%M:%S.%f"),
+                                 row[2], row[4], row[5])
                             ]
             return result
 
@@ -73,8 +74,8 @@ class gamelist():
         return self
 
     def __str__(self):
-        return f"List contains \
-            {len(self.gamelist)} games\nLast added: {self.gamelist[-1]}"
+        return (f"List contains "
+                f"{len(self.gamelist)} games\nLast added: {self.gamelist[-1]}")
 
 
 if __name__ == "__main__":

@@ -5,3 +5,5 @@
 *.json
 .vscode/.ropeproject/config.py
 .vscode/.ropeproject/objectdb
+**/gamelog.egg-info
+**/.vscode
