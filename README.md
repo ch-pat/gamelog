@@ -13,9 +13,9 @@ Features will include:
 * More as they come to mind
 
 Currently running main imports your list from a "backlog_paste.txt" file and allows for adding by manually running python functions in a python shell like this:
-```
+```python
 python3 -i application/main.py
 >>> gl = gamelist()
 Reading existing backlog.csv file
->>> 
+>>> gl += game("The Legend of Zelda", platform="NES", comment="Classic!")
 ```
