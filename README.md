@@ -12,7 +12,7 @@ Features will include:
 * Importing from backloggery.com (by literally manually copying-all your list from the website to a text file)
 * More as they come to mind
 
-You can clone the repository and run `pip install --editable .` from within the directory to create the command `gamelog` for your command line.
+You can clone the repository and run `pip install --editable .` from within the directory to create the command `gamelog` for your command line.*
 
 Usage:
 `gamelog add "The Legend of Zelda"` adds the game to your list
